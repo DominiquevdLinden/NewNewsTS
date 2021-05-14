@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 type Articles = {
   id: number;
@@ -37,11 +38,27 @@ export default function HomePageArticle() {
   return (
     <div>
       {state ? (
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexFlow: "wrap column",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
           <h1>{state.title}</h1>
-          <p>A uthor: {state.author}</p>
-          <p>Category: {state.categoryId}</p>
-          <img src={state.imgUrl}></img>
+          <p>Author: {state.author}</p>
+          <Link to={`/categories/${state.categoryId}`}>
+            <p>Category: {state.categoryId}</p>
+          </Link>
+          <img
+            style={{ maxWidth: 400, maxHeight: 400 }}
+            src={state.imgUrl}
+          ></img>
+          <Link to={`/articles${state.id}`}>
+            <button>Read this article</button>
+          </Link>
         </div>
       ) : (
         "Loading..."
