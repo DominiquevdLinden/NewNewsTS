@@ -55,6 +55,7 @@ export default function HomePageArticle() {
           <img
             style={{ maxWidth: 400, maxHeight: 400 }}
             src={state.imgUrl}
+            alt={state.title}
           ></img>
           <Link to={`/articles/${state.id}`}>
             <button>Read this article</button>

@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route
-            path="/articles/search/:searchText"
+            path="/search/:searchText"
             component={SearchArticlesPage}
           ></Route>
           <Route

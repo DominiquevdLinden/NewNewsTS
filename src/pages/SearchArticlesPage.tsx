@@ -15,7 +15,7 @@ export default function SearchArticlesPage() {
   const history = useHistory();
 
   const navigateToSearch = () => {
-    history.push(`/articles/search/${searchText}`);
+    history.push(`/search/${searchText}`);
   };
 
   useEffect(() => {
@@ -62,6 +62,7 @@ export default function SearchArticlesPage() {
       <NavBar />({state ? state.length : ""})
       <input
         type="text"
+        placeholder={routeParam.searchText}
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       ></input>

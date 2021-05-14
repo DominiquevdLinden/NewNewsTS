@@ -23,10 +23,9 @@ export default function Article(props: Articles) {
           <img
             style={{ maxWidth: 400, maxHeight: 400 }}
             src={props.imgUrl}
+            alt={props.title}
           ></img>
-          <Link to={`/articles/${props.id}`}>
-            <button>Read this article</button>
-          </Link>
+          <p>{props.content}</p>
         </div>
       }
     </div>
