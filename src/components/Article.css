@@ -1,0 +1,11 @@
+div {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap column;
+  align-content: center;
+  align-items: center;
+}
+img {
+  max-width: 400px;
+  max-height: 400px;
+}

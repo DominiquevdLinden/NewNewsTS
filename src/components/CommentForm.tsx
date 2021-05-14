@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CommentForm.css";
 
 type Props = {
   addComment: (name: string, comment: string) => void;
@@ -23,7 +24,7 @@ export default function CommentForm(props: Props) {
         <input
           type="text"
           value={name}
-          style={{ width: 300 }}
+          className="name"
           onChange={(event) => {
             setName(event.target.value);
           }}
@@ -33,7 +34,7 @@ export default function CommentForm(props: Props) {
         <input
           type="text"
           value={comment}
-          style={{ width: 300, height: 100 }}
+          className="comment"
           onChange={(event) => {
             setComment(event.target.value);
           }}
