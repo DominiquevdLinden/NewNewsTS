@@ -5,6 +5,7 @@ export default function ArticleDetailsPage() {
   return (
     <div>
       <NavBar />
+      hello
     </div>
   );
 }

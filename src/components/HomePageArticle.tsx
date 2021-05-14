@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-type Articles = {
+export type Articles = {
   id: number;
   title: string;
   author: string;
@@ -56,7 +56,7 @@ export default function HomePageArticle() {
             style={{ maxWidth: 400, maxHeight: 400 }}
             src={state.imgUrl}
           ></img>
-          <Link to={`/articles${state.id}`}>
+          <Link to={`/articles/${state.id}`}>
             <button>Read this article</button>
           </Link>
         </div>

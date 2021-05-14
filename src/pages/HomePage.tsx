@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div>
       <NavBar />
-      <Link to="/articles">
+      <Link to="/articles/search">
         <button>Search Articles!</button>
       </Link>
       <HomePageArticle />

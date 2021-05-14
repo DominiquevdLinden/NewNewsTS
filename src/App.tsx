@@ -12,6 +12,10 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route
+            path="/articles/search/:searchText"
+            component={SearchArticlesPage}
+          ></Route>
+          <Route
             path="/articles/:articleId"
             component={ArticleDetailsPage}
           ></Route>
@@ -19,7 +23,7 @@ function App() {
             path="/categories/:categoryId"
             component={CategoriesPage}
           ></Route>
-          <Route path="/articles" component={SearchArticlesPage}></Route>
+
           <Route path="/" component={HomePage}></Route>
         </Switch>
       </BrowserRouter>
